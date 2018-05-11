@@ -3,7 +3,7 @@
   "data_name": "ck-tbd-suite", 
   "dict": {
     "url": "https://github.com/ctuning/ck-tbd-suite", 
-    "shared": "git"
+    "shared": "git",
     "repo_deps": [
       {
         "repo_uoa": "ck-tensorflow"
