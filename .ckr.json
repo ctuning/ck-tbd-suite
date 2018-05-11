@@ -4,7 +4,21 @@
   "dict": {
     "url": "https://github.com/ctuning/ck-tbd-suite", 
     "shared": "git"
-  }, 
+    "repo_deps": [
+      {
+        "repo_uoa": "ck-tensorflow"
+      },
+      {
+        "repo_uoa": "ck-mxnet"
+      },
+      {
+        "repo_uoa": "ck-cntk"
+      },
+      {
+        "repo_uoa": "ck-crowdtuning"
+      }
+    ]
+  },
   "data_alias": "ck-tbd-suite", 
   "data_uoa": "ck-tbd-suite"
 }
