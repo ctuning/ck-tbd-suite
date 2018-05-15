@@ -10,18 +10,21 @@
     "imagenet-train": {
       "local": "yes", 
       "name": "ImageNet dataset (train)", 
+      "skip_from_bat": "yes", 
       "sort": 20, 
       "tags": "dataset,imagenet,raw,train"
     }, 
     "imagenet-val": {
       "local": "yes", 
       "name": "ImageNet dataset (val)", 
+      "skip_from_bat": "yes", 
       "sort": 30, 
       "tags": "dataset,imagenet,raw,val"
     }, 
     "python": {
       "local": "yes", 
       "name": "Python interpreter (v3+)", 
+      "skip_from_bat": "yes", 
       "sort": 5, 
       "tags": "compiler,python", 
       "version_from": [
@@ -31,6 +34,7 @@
     "tensorflow": {
       "local": "yes", 
       "name": "TensorFlow Library", 
+      "skip_from_bat": "yes", 
       "sort": 10, 
       "tags": "lib,tensorflow"
     }
