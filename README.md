@@ -82,9 +82,14 @@ You can install different versions of TF via CK as follows:
 $ ck install package --tags=lib,tensorflow
 ```
 
-For example, you can install prebuilt CUDA version of TensorFlow 1.8.0 as follows:
+For example, you can install prebuilt CUDA version of TensorFlow 1.8.0 if you have CUDA >=9.0 as follows:
 ```
 $ ck install package:lib-tensorflow-1.8.0-cuda
+```
+
+or TensorFlow 1.4.0 if you have CUDA < 9.0 as follows:
+```
+$ ck install package:lib-tensorflow-1.4.0-cuda
 ```
 
 ## Run image classification training using TF
