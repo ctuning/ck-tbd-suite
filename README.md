@@ -82,7 +82,7 @@ You can install different versions of TF via CK as follows:
 $ ck install package --tags=lib,tensorflow
 ```
 
-For example, you can install prebuilt CUDA version of TensorFlow 1.8.0 if you have CUDA >=9.0 as follows:
+For example, you can install pre-built CUDA version of TensorFlow 1.8.0 if you have CUDA >=9.0 as follows:
 ```
 $ ck install package:lib-tensorflow-1.8.0-cuda
 ```
@@ -92,11 +92,26 @@ or TensorFlow 1.4.0 if you have CUDA < 9.0 as follows:
 $ ck install package:lib-tensorflow-1.4.0-cuda
 ```
 
+## Prepare training set of TF
+
+You can now convert ImageNet training set to a TF format as follows:
+```
+$ ck install package:imagenet-2012-train-tf
+```
+
+However since it takes lots of space (~100GB) and time (hours), 
+if you have already processed training set in the TF format, you
+can detect it by CK as follows:
+
+```
+$ ck detect soft:dataset.imagenet.train.tf
+```
+
 ## Run image classification training using TF
 
 Now you can try to run image classification training using TF as follows:
 ```
-$ ck run program:image-classification-tensorflow
+$ ck run program:image-classification-inception-tf
 ```
 
 You need to select a specific command line:
@@ -104,7 +119,7 @@ You need to select a specific command line:
 * train-and-profile (to use nvprof)
 * train-and-profile-fp32 (to use nvprof & fp32)
 
-You can also customize your trianing run as follows:
+You can also customize your training run as follows:
 ```
 $ ck run program:image-classification-tensorflow --env.LEARNING_OPTIMIZER=sgd \
    --env.BATCH_SIZE=32 \
@@ -116,6 +131,10 @@ $ ck run program:image-classification-tensorflow --env.LEARNING_OPTIMIZER=sgd \
 
 ## Next steps
 
-We are now preparing CK modules to perform exploration of above parameters and save results 
+We plan to add a CK package for a smaller training set (to validate the functionality of this workflow),
+CK module to expose or calculate accuracy of a final model,
+and automate collection and processing of nvprof statistics.
+
+We also plan to prepare CK modules to perform exploration of above parameters and save results 
 in a [ReQuEST format](http://cKnowledge.org/request) to visualize them 
 via [live CK scoreboard](http://cKnowledge.org/repo).
