@@ -47,30 +47,46 @@ $ ck detect platform.gpgpu --cuda
 
 If you are prompted to choose a platform description, select the one the name of which is the same or similar to your platform or `generic-linux`.
 
+## Detect all platform parameters in a unified way
+
+```
+$ ck detect platform
+```
+
 ## Install or detect ImageNet dataset
 
 Before running AI/ML benchmarking via CK, you need to install ImageNet data sets or detect already installed ones.
 
-You can install ImageNet training data set (~150GB) via CK as follows:
+Just for a test, you can install a tiny ImageNet training data set (several MB) via CK as follows:
+```
+$ ck install package:imagenet-2012-train-min
+```
+
+You can later install a full ImageNet training data set (~150GB) via CK which will co-exist with the above one as follows:
 ```
 $ ck install package:imagenet-2012-train
 ```
 
-Alternatively, you can detect already installed training set as follows:
+Alternatively, you can detect already installed training sets as follows:
 ```
 $ ck detect soft:dataset.imagenet.train --search_dirs={root path to your training dataset}
 ```
 
-In the same way, you can install ImageNet validation data set (~10GB) via CK
+In the same way, you can install a small demo ImageNe validation data set (a few MB) via CK:
+```
+$ ck install package:imagenet-2012-val-min
+```
+
+and later full ImageNet validation data set (~10GB) via CK
 ```
 $ ck install package:imagenet-2012-val
 ```
-or detect already installed one as follows:
+or detect already installed ones as follows:
 ```
 $ ck detect soft:dataset.imagenet.val --search_dirs={root path to your validation dataset}
 ```
 
-You can see all registered environments in the CK as follows:
+You can see all registered virtual environments in the CK as follows:
 ```
 $ ck show env
 ```
@@ -94,14 +110,18 @@ $ ck install package:lib-tensorflow-1.4.0-cuda
 
 ## Prepare training set of TF
 
-You can now convert ImageNet training set to a TF format as follows:
+You can now convert your tiny demo ImageNet training set to a TF format as follows:
+```
+$ ck install package:imagenet-2012-train-tf-min
+```
+and/or the full one as follows:
 ```
 $ ck install package:imagenet-2012-train-tf
 ```
 
-However since it takes lots of space (~100GB) and time (hours), 
-if you have already processed training set in the TF format, you
-can detect it by CK as follows:
+However processing of the full training set requires a large amount of disk space (~100GB) 
+and execution time (hours and even days), you can detect already processed training set 
+in the TF format as follows (for example on a shared drive):
 
 ```
 $ ck detect soft:dataset.imagenet.train.tf
