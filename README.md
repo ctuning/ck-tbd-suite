@@ -146,7 +146,18 @@ $ ck run program:image-classification-tensorflow --env.LEARNING_OPTIMIZER=sgd \
    --env.LEARNING_RATE=0.1 \
    --env.LEARNING_RATE_DECAY_FACTOR=0.1 \
    --env.NUM_EPOCHS_PER_DECAY=30 \
-   --env.WEIGHT_DECAY=0.0001
+   --env.WEIGHT_DECAY=0.0001 \
+   --env.MAX_NUMBER_OF_STEPS=1000
+```
+
+You can clean all temporal check points by adding "--clean" flag:
+```
+$ ck run program:image-classification-tensorflow --clean
+```
+
+To run a small test use the following command line:
+```
+$ ck run program:image-classification-tensorflow --env.BATCH_SIZE=2 --env.MAX_NUMBER_OF_STEPS=100
 ```
 
 ## Next steps
