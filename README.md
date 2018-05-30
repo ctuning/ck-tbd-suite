@@ -141,7 +141,7 @@ You need to select a specific command line:
 
 You can also customize your training run as follows:
 ```
-$ ck run program:image-classification-tensorflow --env.LEARNING_OPTIMIZER=sgd \
+$ ck run program:image-classification-inception-tf --env.LEARNING_OPTIMIZER=sgd \
    --env.BATCH_SIZE=32 \
    --env.LEARNING_RATE=0.1 \
    --env.LEARNING_RATE_DECAY_FACTOR=0.1 \
@@ -152,12 +152,12 @@ $ ck run program:image-classification-tensorflow --env.LEARNING_OPTIMIZER=sgd \
 
 You can clean all temporal check points by adding "--clean" flag:
 ```
-$ ck run program:image-classification-tensorflow --clean
+$ ck run program:image-classification-inception-tf --clean
 ```
 
 To run a small test use the following command line:
 ```
-$ ck run program:image-classification-tensorflow --env.BATCH_SIZE=2 --env.MAX_NUMBER_OF_STEPS=100 --clean
+$ ck run program:image-classification-inception-tf --env.BATCH_SIZE=2 --env.MAX_NUMBER_OF_STEPS=100 --clean
 ```
 
 ## Next steps
