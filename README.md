@@ -157,7 +157,7 @@ $ ck run program:image-classification-tensorflow --clean
 
 To run a small test use the following command line:
 ```
-$ ck run program:image-classification-tensorflow --env.BATCH_SIZE=2 --env.MAX_NUMBER_OF_STEPS=100
+$ ck run program:image-classification-tensorflow --env.BATCH_SIZE=2 --env.MAX_NUMBER_OF_STEPS=100 --clean
 ```
 
 ## Next steps
