@@ -1,0 +1,81 @@
+{
+  "backup_data_uid": "fe746299446589d1", 
+  "data_name": "image-classification-tensorflow",
+  "no_compile": "yes", 
+  "no_target_file": "yes", 
+  "process_in_tmp": "yes", 
+  "program": "yes", 
+  "run_cmds": {
+    "train": {
+      "ignore_return_code": "no", 
+      "run_time": {
+        "run_cmd_main": "../scripts/resnet-imagenet$#script_ext#$" 
+      },
+      "run_deps": {
+        "lib-tensorflow": {
+          "local": "yes",
+          "name": "TensorFlow library",
+          "sort": 10,
+          "tags": "lib,tensorflow"
+        }
+      }
+    },
+    "train-and-profile": {
+      "ignore_return_code": "no", 
+      "run_time": {
+        "run_cmd_main": "../scripts/resnet-imagenet$#script_ext#$ --profile" 
+      },
+      "run_deps": {
+        "lib-tensorflow": {
+          "local": "yes",
+          "name": "TensorFlow library (CUDA)",
+          "sort": 10,
+          "tags": "lib,tensorflow,vcuda"
+        }
+      }
+    },
+    "train-and-profile-fp32": {
+      "ignore_return_code": "no", 
+      "run_time": {
+        "run_cmd_main": "../scripts/resnet-imagenet$#script_ext#$ --profile-fp32" 
+      },
+      "run_deps": {
+        "lib-tensorflow": {
+          "local": "yes",
+          "name": "TensorFlow library (CUDA)",
+          "sort": 10,
+          "tags": "lib,tensorflow,vcuda"
+        }
+      }
+    }
+  }, 
+  "run_deps": {
+    "imagenet-train": {
+      "local": "yes",
+      "name": "ImageNet dataset (train, TF)",
+      "sort": 10,
+      "tags": "dataset,imagenet,raw,train-tf"
+    },
+    "python": {
+      "local": "yes",
+      "name": "Python interpreter (v3+)",
+      "sort": 5,
+      "tags": "compiler,python",
+      "version_from": [
+        3
+      ]
+    }
+  }, 
+  "run_vars": {
+    "LEARNING_OPTIMIZER": "sgd",
+    "BATCH_SIZE": 32,
+    "LEARNING_RATE": 0.1,
+    "LEARNING_RATE_DECAY_FACTOR": 0.1,
+    "NUM_EPOCHS_PER_DECAY": 30,
+    "WEIGHT_DECAY": 0.0001
+  },
+  "tags": [
+    "image-classification",
+    "tensorflow-image-classification"
+  ]
+}
