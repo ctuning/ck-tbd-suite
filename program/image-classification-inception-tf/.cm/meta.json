@@ -1,5 +1,8 @@
 {
   "backup_data_uid": "784ffab4a4d3ff7b", 
+  "ck_to_env": {
+    "CK_AUX_TBD_SCRIPT":"script:1f6137fa79934028"
+  },
   "data_name": "image-classification-inception-tf",
   "no_compile": "yes", 
   "no_target_file": "yes", 
@@ -9,7 +12,7 @@
     "train": {
       "ignore_return_code": "no", 
       "run_time": {
-        "run_cmd_main": "../scripts/inception-imagenet$#script_ext#$" 
+        "run_cmd_main": "$<<CK_AUX_TBD_SCRIPT>>$/scripts/imagenet$#script_ext#$ inception_v3" 
       },
       "run_deps": {
         "lib-tensorflow": {
@@ -23,7 +26,7 @@
     "train-and-profile": {
       "ignore_return_code": "no", 
       "run_time": {
-        "run_cmd_main": "../scripts/inception-imagenet$#script_ext#$ --profile" 
+        "run_cmd_main": "$<<CK_AUX_TBD_SCRIPT>>$/scripts/imagenet$#script_ext#$ inception_v3 --profile" 
       },
       "run_deps": {
         "lib-tensorflow": {
@@ -37,7 +40,7 @@
     "train-and-profile-fp32": {
       "ignore_return_code": "no", 
       "run_time": {
-        "run_cmd_main": "../scripts/inception-imagenet$#script_ext#$ --profile-fp32" 
+        "run_cmd_main": "$<<CK_AUX_TBD_SCRIPT>>$/scripts/imagenet$#script_ext#$ inception_v3 --profile-fp32" 
       },
       "run_deps": {
         "lib-tensorflow": {
