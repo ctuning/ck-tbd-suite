@@ -29,7 +29,7 @@ else
 fi
 
 cd $NMT_ROOT/source/nmt-tf-1.2 && \
-$PREFIX python2 -m nmt.nmt --src=en --tgt=vi \
+$PREFIX "${CK_ENV_COMPILER_PYTHON_FILE}" -m nmt.nmt --src=en --tgt=vi \
                            --hparams_path=$NMT_ROOT/hparams/$HPARAM_FNAME \
                            --out_dir=$NMT_ROOT/models \
                            --vocab_prefix=$DATASET_ROOT/iwslt15_en-vi/vocab \

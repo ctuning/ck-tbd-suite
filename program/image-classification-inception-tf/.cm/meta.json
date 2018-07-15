@@ -12,7 +12,7 @@
     "train": {
       "ignore_return_code": "no", 
       "run_time": {
-        "run_cmd_main": "$<<CK_AUX_TBD_SCRIPT>>$/scripts/imagenet$#script_ext#$ inception_v3" 
+        "run_cmd_main": "$<<CK_AUX_TBD_SCRIPT>>$/scripts/imagenet-tf$#script_ext#$ inception_v3" 
       },
       "run_deps": {
         "lib-tensorflow": {
@@ -26,7 +26,7 @@
     "train-and-profile": {
       "ignore_return_code": "no", 
       "run_time": {
-        "run_cmd_main": "$<<CK_AUX_TBD_SCRIPT>>$/scripts/imagenet$#script_ext#$ inception_v3 --profile" 
+        "run_cmd_main": "$<<CK_AUX_TBD_SCRIPT>>$/scripts/imagenet-tf$#script_ext#$ inception_v3 --profile" 
       },
       "run_deps": {
         "lib-tensorflow": {
@@ -40,7 +40,7 @@
     "train-and-profile-fp32": {
       "ignore_return_code": "no", 
       "run_time": {
-        "run_cmd_main": "$<<CK_AUX_TBD_SCRIPT>>$/scripts/imagenet$#script_ext#$ inception_v3 --profile-fp32" 
+        "run_cmd_main": "$<<CK_AUX_TBD_SCRIPT>>$/scripts/imagenet-tf$#script_ext#$ inception_v3 --profile-fp32" 
       },
       "run_deps": {
         "lib-tensorflow": {
@@ -55,7 +55,7 @@
   "run_deps": {
     "imagenet-train": {
       "local": "yes",
-      "name": "ImageNet dataset (train, TF)",
+      "name": "ImageNet dataset (train, TensorFlow)",
       "sort": 10,
       "tags": "dataset,imagenet,raw,train-tf"
     },

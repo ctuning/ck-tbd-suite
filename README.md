@@ -112,7 +112,7 @@ $ ck install package:lib-tensorflow-1.4.0-cuda
 
 You can now convert your tiny demo ImageNet training set to a TF format as follows:
 ```
-$ ck install package:imagenet-2012-train-tf-min
+$ ck install package:imagenet-2012-train-min-tf
 ```
 and/or the full one as follows:
 ```
