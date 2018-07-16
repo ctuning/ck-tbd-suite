@@ -10,5 +10,5 @@ then
 fi
 
 $PREFIX "${CK_ENV_COMPILER_PYTHON_FILE}" ../source/train_imagenet.py \
-   --gpus ${GPU_NUM} --batch-size ${BATCH_SIZE} --image-shape 3,299,299 --num-epochs ${NUM_EPOCHS_PER_DECAY} --network $1 \
+   --gpus ${GPU_NUM} --batch-size ${BATCH_SIZE} --image-shape ${IMAGE_SHAPE} --num-epochs ${NUM_EPOCHS_PER_DECAY} --network $1 \
    --data-train $DATASET_DIR $SUFFIX
