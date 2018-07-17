@@ -3,7 +3,7 @@
 
 This [CK](https://github.com/ctuning/ck) repository provides automated, portable and customizable workflows
 for [AI/ML benchmarks](https://github.com/tbd-ai/tbd-suite). We suggest you to look 
-at this [Getting started guide](https://github.com/ctuning/ck/wiki/First-feeling) before using CK.
+at this [Getting started guide](https://github.com/ctuning/ck/wiki/First-steps) before using CK.
 
 ## Minimal CK installation
 
