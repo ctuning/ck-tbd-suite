@@ -9,14 +9,14 @@ elif [ "$2" = "--profile" ]
 then
         mkdir -p measurements
         export PREFIX="${CK_ENV_COMPILER_CUDA_BIN}/nvprof --profile-from-start off \
-                --export-profile measurements/tensorflow.nvvp -f --print-summary"
+                --export-profile measurements/profile.nvvp -f --print-summary"
         export SUFFIX=" --nvprof_on=True"
 
 elif [ "$2" = "--profile-fp32" ]
 then
         mkdir -p measurements
         export PREFIX="${CK_ENV_COMPILER_CUDA_BIN}/nvprof --profile-from-start off \
-                --export-profile measurements/tensorflow.nvvp -f \
+                --export-profile measurements/profile.nvvp -f \
                 --metrics single_precision_fu_utilization"
         export SUFFIX=" --nvprof_on=True"
 
