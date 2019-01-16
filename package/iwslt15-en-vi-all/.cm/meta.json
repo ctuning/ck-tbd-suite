@@ -16,15 +16,15 @@
     "no_ver_in_suggested_path": "yes",
     "version": "2015"
   },
-  "end_full_path_universal":"iwslt15_en-vi/train.vi",
   "deps": {
     "iwslt1_en-vi": {
-      "local": "yes", 
-      "name": "IWSLT15 English-Vietnamese dataset (all)", 
-      "sort": 20, 
+      "local": "yes",
+      "name": "IWSLT15 English-Vietnamese dataset (all)",
+      "sort": 20,
       "tags": "dataset,translation,raw,train"
     }
-},
+  },
+  "end_full_path_universal": "iwslt15_en-vi/train.vi",
   "need_cpu_info": "no",
   "process_script": "install",
   "soft_uoa": "b2f3da085d3c47e7",

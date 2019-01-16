@@ -14,8 +14,8 @@
       "run_deps": {
         "lib-cntk": {
           "local": "yes",
-          "skip_default": "yes",
           "name": "CNTK",
+          "skip_default": "yes",
           "sort": 10,
           "tags": "lib,cntk"
         },
@@ -30,10 +30,10 @@
         }
       },
       "run_time": {
-        "run_cmd_main": "$<<CK_ENV_LIB_CNTK_FULL>>$ configFile=$<<CNTK_SCRIPT_TMP>>$",
         "pre_process_via_ck": {
           "script_name": "preprocess"
-        }
+        },
+        "run_cmd_main": "$<<CK_ENV_LIB_CNTK_FULL>>$ configFile=$<<CNTK_SCRIPT_TMP>>$"
       }
     }
   },
@@ -62,8 +62,8 @@
   },
   "run_vars": {
     "BATCH_SIZE": 256,
-    "CNTK_SCRIPT":"InceptionV3.cntk",
-    "CNTK_SCRIPT_TMP":"tmp-brain-script.cntk"
+    "CNTK_SCRIPT": "InceptionV3.cntk",
+    "CNTK_SCRIPT_TMP": "tmp-brain-script.cntk"
   },
   "tags": [
     "image-classification",

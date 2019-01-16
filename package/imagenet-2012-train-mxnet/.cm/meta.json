@@ -14,6 +14,13 @@
       "sort": 20,
       "tags": "dataset,imagenet,raw,train"
     },
+    "mxnet": {
+      "local": "yes",
+      "name": "MXNet library",
+      "skip_from_bat": "yes",
+      "sort": 10,
+      "tags": "lib,mxnet"
+    },
     "python": {
       "local": "yes",
       "name": "Python interpreter (v3+)",
@@ -23,13 +30,6 @@
       "version_from": [
         3
       ]
-    },
-    "mxnet": {
-      "local": "yes",
-      "name": "MXNet library",
-      "skip_from_bat": "yes",
-      "sort": 10,
-      "tags": "lib,mxnet"
     }
   },
   "end_full_path_universal": "install/imagenet1k.rec",

@@ -71,9 +71,9 @@
   },
   "run_vars": {
     "BATCH_SIZE": 32,
-    "NUM_EPOCHS_PER_DECAY": 100,
-    "IMAGE_SHAPE":"3,299,299",
-    "GPU_NUM": 0
+    "GPU_NUM": 0,
+    "IMAGE_SHAPE": "3,299,299",
+    "NUM_EPOCHS_PER_DECAY": 100
   },
   "tags": [
     "image-classification",
